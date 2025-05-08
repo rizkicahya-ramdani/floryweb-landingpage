@@ -6,6 +6,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
 
     <title>FloryWeb - Jasa Pembuatan Website</title>
 </head>
@@ -136,7 +137,7 @@
                 <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <div class="text-center">
                         <img src="https://img.icons8.com/ios-filled/50/shop.png" class="mx-auto mb-3" alt="Icon Company" />
-                        <h3 class="text-xl font-bold text-green-600">Company Profile</h3>
+                        <h3 class="text-xl font-bold text-green-600">Toko Online</h3>
                         <p class="text-sm text-gray-600 mb-2">Profil bisnis, jasa, atau UMKM</p>
                         <div class="mb-2 text-sm line-through text-gray-500">Rp 1.500.000</div>
                         <div class="text-green-600 text-2xl font-extrabold mb-2">Rp 1 Juta</div>
@@ -159,7 +160,7 @@
                 <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="text-center">
                         <img src="https://img.icons8.com/ios-filled/50/school.png" class="mx-auto mb-3" alt="Icon Company" />
-                        <h3 class="text-xl font-bold text-green-600">Company Profile</h3>
+                        <h3 class="text-xl font-bold text-green-600">Website Sekolah</h3>
                         <p class="text-sm text-gray-600 mb-2">Profil bisnis, jasa, atau UMKM</p>
                         <div class="mb-2 text-sm line-through text-gray-500">Rp 1.500.000</div>
                         <div class="text-green-600 text-2xl font-extrabold mb-2">Rp 1 Juta</div>
@@ -263,16 +264,15 @@
 
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="img/globe-icon.svg" alt="Logo" class="w-8 h-8">
-                    <span class="text-2xl font-serif italic font-bold">FLORYWEB</span>
+            <div class="text-center">
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="img/floryweb-high-resolution-logo-transparent.png" class="w-50" alt="">
                 </div>
                 <div class="flex gap-4">
-                    <a href="#"><img src="img/icon-facebook.svg" alt="Facebook" class="w-6 h-6 hover:scale-110 transition"></a>
-                    <a href="#"><img src="img/icon-instagram.svg" alt="Instagram" class="w-6 h-6 hover:scale-110 transition"></a>
-                    <a href="#"><img src="img/icon-whatsapp.svg" alt="WhatsApp" class="w-6 h-6 hover:scale-110 transition"></a>
-                    <a href="#"><img src="img/icon-twitter.svg" alt="Twitter" class="w-6 h-6 hover:scale-110 transition"></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook w-6 h-6 hover:scale-110 transition"></i></a>
+                    <a href="#"><i class="bi bi-whatsapp w-6 h-6 hover:scale-110 transition"></i></a>
+                    <a href="#"><i class="bi bi-telegram w-6 h-6 hover:scale-110 transition"></i></a>
                 </div>
             </div>
             <div>
@@ -289,7 +289,7 @@
                 <p>SSL</p>
             </div>
         </div>
-        <div class="text-center text-sm text-gray-400 mt-8">&copy; 2025 FloryWeb. All rights reserved.</div>
+        <div class="text-center text-sm text-gray-400 mt-8">&copy; <span id="year"></span> FloryWeb. All rights reserved.</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -304,6 +304,8 @@
         menuBtn.addEventListener('click', () => {
           mobileMenu.classList.toggle('hidden');
         });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
