@@ -1,332 +1,483 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloryWeb - Jasa Pembuatan Website</title>
+    <meta name="description" content="Jasa pembuatan website profesional dengan desain modern, responsif, dan SEO friendly. Wujudkan ide digital Anda bersama kami.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
 
-    <title>FloryWeb - Jasa Pembuatan Website</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(34,211,238,0.7), 0 0 32px rgba(34,211,238,0.3);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(34,211,238,0.7), 0 0 8px rgba(34,211,238,0.8);
+        }
+        .neon-border {
+            border: 1.5px solid rgba(34,211,238,0.5);
+            box-shadow: 0 0 16px 0 rgba(34,211,238,0.15);
+        }
+        .badge-popular {
+            background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            box-shadow: 0 2px 8px 0 rgba(34,211,238,0.2);
+            letter-spacing: 1px;
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-900 text-white antialiased">
 
-    <nav class="bg-green-600 text-white shadow-md sticky top-0 z-50">
-        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 font-bold text-xl">
-                    FloryWeb
-                </div>
-        
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 items-center text-center">
-                    <a href="#" class="transition hover:text-gray-200">Home</a>
-                    <a href="#cara-order" class="transition hover:text-gray-200">Cara Order</a>
-                    <a href="#paket-website" class="transition hover:text-gray-200">Paket Website</a>
-                    <a href="#faq" class="transition hover:text-gray-200">FAQ</a>
-                    <a href="#promo" class="transition hover:text-gray-200">Promo</a>
-                </div>
-        
-                <!-- Call to Action -->
-                <div class="hidden md:block">
-                    <a href="#" class="bg-white text-green-600 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100 transition">
-                        Order Sekarang
-                    </a>
-                </div>
-        
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="focus:outline-none">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-            <a href="#" class="block py-2 hover:underline">Home</a>
-            <a href="#cara-order" class="block py-2 hover:underline">Cara Order</a>
-            <a href="#paket-website" class="block py-2 hover:underline">Paket Website</a>
-            <a href="#faq" class="block py-2 hover:underline">FAQ</a>
-            <a href="#promo" class="block py-2 hover:underline">Promo</a>
-            <a href="#" class="block mt-2 bg-green-400 text-white text-center font-semibold py-2 rounded-lg hover:bg-green-500 transition">
-                Order Sekarang
-            </a>
-        </div>
-    </nav>
-      
-    <header class="bg-green-50 py-24">
-        <div class="container max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-around gap-8">
-            <!-- Image -->
-            <div class="md:w-1/2" data-aos="fade-down" data-aos-duration="1000">
-                <img src="img/undraw_working_n9u0.svg" alt="Illustration" class="w-120 h-auto" />
-            </div>
-
-            <!-- Text -->
-            <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                <h1 class="text-2xl md:text-2xl font-bold mb-4">
-                    Buat Website Profesional, <br class="hidden md:inline">Tingkatkan Bisnismu Sekarang!
-                </h1>
-                <p class="text-gray-700 text-base md:text-lg">
-                    Mau punya website profesional tanpa harus menguras kantong? Website yang menarik dan responsif dapat meningkatkan
-                    kredibilitas bisnis Anda! Jangan tunggu lagi, tingkatkan bisnis Anda sekarang!
-                </p>
-            </div>
+    <header class="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-lg shadow-cyan-500/5">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center relative">
+                <a href="#" class="text-2xl font-bold text-white">
+                    Flory<span class="text-cyan-400">Web</span>
+                </a>
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="#hero" class="hover:text-cyan-400 transition-colors duration-300">Beranda</a></li>
+                    <li><a href="#cara-order" class="hover:text-cyan-400 transition-colors duration-300">Cara Order</a></li>
+                    <li><a href="#paket-website" class="hover:text-cyan-400 transition-colors duration-300">Paket Website</a></li>
+                    <li><a href="#faq" class="hover:text-cyan-400 transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#promo" class="hover:text-cyan-400 transition-colors duration-300">Promo</a></li>
+                </ul>
+                <a href="#kontak" class="hidden md:inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-cyan-500/40 transition-all duration-300 btn-glow">
+                    Hubungi Kami
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <!-- Mobile Menu -->
+                <ul id="mobile-menu" class="absolute top-16 right-0 w-48 bg-slate-900 rounded-xl shadow-lg py-4 px-6 flex flex-col gap-4 md:hidden z-50 transition-all duration-300 opacity-0 pointer-events-none">
+                    <li><a href="#hero" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Beranda</a></li>
+                    <li><a href="#cara-order" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Cara Order</a></li>
+                    <li><a href="#paket-website" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Paket Website</a></li>
+                    <li><a href="#faq" class="block py-2 hover:text-cyan-400 transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#promo" class="block py-2 hover:text-cyan-400 transition-colors duration-300">Promo</a></li>
+                    <li><a href="#kontak" class="block py-2 bg-cyan-500 text-white rounded-lg text-center font-semibold hover:bg-cyan-600 transition">Hubungi Kami</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section id="cara-order" class="py-24 bg-white">
-        <div class="container max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-down" data-aos-duration="1000">Cara Order</h2>
-            <div class="grid md:grid-cols-4 gap-6 text-center">
-                <div class="p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition" data-aos="flip-left" data-aos-duration="1000">
-                    <h3 class="font-semibold text-lg mb-2">1. Konsultasi</h3>
-                    <p class="text-sm text-gray-600">Hubungi kami dan sampaikan kebutuhan website Anda.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
-                    <h3 class="font-semibold text-lg mb-2">2. Pemilihan Paket</h3>
-                    <p class="text-sm text-gray-600">Pilih paket website yang sesuai dengan bisnis Anda.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
-                    <h3 class="font-semibold text-lg mb-2">3. Proses Pembuatan</h3>
-                    <p class="text-sm text-gray-600">Kami mulai membuat website sesuai permintaan.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
-                    <h3 class="font-semibold text-lg mb-2">4. Selesai & Revisi</h3>
-                    <p class="text-sm text-gray-600">Website diserahkan, Anda bisa memberikan revisi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="paket-website" class="py-20">
-        <div class="container max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down" data-aos-duration="1000">Paket Website</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- Paket 1: Company Profile -->
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="text-center">
-                        <img src="https://img.icons8.com/ios-filled/50/company.png" class="mx-auto mb-3" alt="Icon Company" />
-                        <h3 class="text-xl font-bold text-green-600">Company Profile</h3>
-                        <p class="text-sm text-gray-600 mb-2">Profil bisnis perusahaan, jasa, atau UMKM</p>
-                        <div class="mb-2 text-sm line-through text-gray-500">Rp 1.500.000</div>
-                        <div class="text-green-600 text-2xl font-extrabold mb-2">Rp 1 Juta</div>
-                        <div class="text-sm text-red-600 font-semibold mb-4">Diskon 33%</div>
-                    </div>
-                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                        <li>✅ Free Domain (.com / .my.id, dll)</li>
-                        <li>✅ SSL / HTTPS</li>
-                        <li>✅ Hosting Gratis</li>
-                        <li>✅ Bandwidth Min. 40GB</li>
-                        <li>✅ Desain Responsive</li>
-                        <li>✅ Desain Logo (Free Simple)</li>
-                        <li>✅ Fitur Chat WhatsApp</li>
-                        <li>✅ Support</li>
-                        <li>✅ Garansi 1 Tahun</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-sm text-center text-gray-600 mb-3">Perpanjangan Mulai <strong>500rb/tahun</strong></p>
-                        <button class="w-full bg-green-600 text-white py-2 rounded-xl font-semibold hover:bg-green-700 transition">Pilih Paket</button>
-                    </div>
-                </div>
-
-                <!-- Paket 2: Toko Online / Katalog -->
-                <div class="flex flex-col h-full bg-white p-6 rounded-2xl shadow-md border border-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="text-center">
-                        <img src="https://img.icons8.com/ios-filled/50/shop.png" class="mx-auto mb-3" alt="Icon Toko Online" />
-                        <h3 class="text-xl font-bold text-green-600">Toko Online/Katalog</h3>
-                        <p class="text-sm text-gray-600 mb-2">Katalog produk UMKM, herbal, atau kerajinan</p>
-                        <div class="mb-2 text-sm line-through text-gray-500">Rp 1.500.000</div>
-                        <div class="text-green-600 text-2xl font-extrabold mb-2">Rp 1 Juta</div>
-                        <div class="text-sm text-red-600 font-semibold mb-4">Diskon 33%</div>
-                    </div>
-                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                        <li>✅ Free Domain (.com / .my.id, dll)</li>
-                        <li>✅ SSL / HTTPS</li>
-                        <li>✅ Hosting Gratis</li>
-                        <li>✅ Bandwidth Min. 40GB</li>
-                        <li>✅ Desain Responsive</li>
-                        <li>✅ Desain Logo (Free Simple)</li>
-                        <li>✅ Fitur Chat WhatsApp</li>
-                        <li>✅ Support</li>
-                        <li>✅ Garansi 1 Tahun</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-sm text-center text-gray-600 mb-3">Perpanjangan Mulai <strong>500rb/tahun</strong></p>
-                        <button class="w-full bg-green-600 text-white py-2 rounded-xl font-semibold hover:bg-green-700 transition">Pilih Paket</button>
-                    </div>
-                </div>
-
-                <!-- Paket 3: Instansi/Sekolah -->
-                <div class="flex flex-col h-full bg-white p-6 rounded-2xl shadow-md border border-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="text-center">
-                        <img src="https://img.icons8.com/ios-filled/50/school.png" class="mx-auto mb-3" alt="Icon Sekolah" />
-                        <h3 class="text-xl font-bold text-green-600">Instansi/Sekolah</h3>
-                        <p class="text-sm text-gray-600 mb-2">Instansi, Sekolah, Dinas, Pemda, Lembaga, dll</p>
-                        <div class="mb-2 text-sm line-through text-gray-500">Rp 3.000.000</div>
-                        <div class="text-green-600 text-2xl font-extrabold mb-2">Rp 2 Juta</div>
-                        <div class="text-sm text-red-600 font-semibold mb-4">Diskon 33%</div>
-                    </div>
-                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                        <li>✅ Free Domain (.sch.id / .com, dll)</li>
-                        <li>✅ SSL / HTTPS</li>
-                        <li>✅ Hosting Gratis</li>
-                        <li>✅ Bandwidth Unmetered</li>
-                        <li>✅ Desain Semi Custom</li>
-                        <li>✅ Desain Logo (Free Simple)</li>
-                        <li>✅ Fitur Chat WhatsApp</li>
-                        <li>✅ Support</li>
-                        <li>✅ Garansi 1 Tahun</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-sm text-center text-gray-600 mb-3">Perpanjangan Mulai <strong>600rb/tahun</strong></p>
-                        <button class="w-full bg-green-600 text-white py-2 rounded-xl font-semibold hover:bg-green-700 transition">Pilih Paket</button>
-                    </div>
-                </div>
-
-                <!-- Paket 4: Custom -->
-                <div class="flex flex-col h-full bg-white p-6 rounded-2xl shadow-md border border-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="text-center">
-                        <img src="https://img.icons8.com/ios-filled/50/cloud.png" class="mx-auto mb-3" alt="Icon Custom" />
-                        <h3 class="text-xl font-bold text-green-600">Custom</h3>
-                        <p class="text-sm text-gray-600 mb-2">Bisnis profesional dan sistem informasi</p>
-                        <div class="mb-2 text-sm line-through text-gray-500">Rp 6.000.000</div>
-                        <div class="text-green-600 text-2xl font-extrabold mb-2">Rp 4 Juta</div>
-                        <div class="text-sm text-red-600 font-semibold mb-4">Diskon 33%</div>
-                    </div>
-                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                        <li>✅ Free Domain (Ya)</li>
-                        <li>✅ SSL / HTTPS</li>
-                        <li>✅ Hosting Unlimited</li>
-                        <li>✅ Bandwidth Unmetered</li>
-                        <li>✅ Email & Domain Akun</li>
-                        <li>✅ Fitur & Desain Full Custom</li>
-                        <li>✅ Support</li>
-                        <li>✅ *Penawaran Sesuai Kebutuhan*</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-sm text-center text-gray-600 mb-3">Perpanjangan Mulai <strong>2jtan/tahun</strong></p>
-                        <button class="w-full bg-green-600 text-white py-2 rounded-xl font-semibold hover:bg-green-700 transition">Pilih Paket</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-20 bg-green-50">
-        <div class="container max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-down" data-aos-duration="1000">Pertanyaan Umum</h2>
-            <div class="space-y-4">
-                <details class="bg-white p-4 rounded shadow" data-aos="flip-up" data-aos-duration="1000">
-                    <summary class="font-semibold cursor-pointer">Berapa lama proses pembuatan website?</summary>
-                    <p class="mt-2 text-gray-600">Rata-rata 3-7 hari kerja tergantung kompleksitas permintaan.</p>
-                </details>
-                <details class="bg-white p-4 rounded shadow" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
-                    <summary class="font-semibold cursor-pointer">Apakah bisa request desain sendiri?</summary>
-                    <p class="mt-2 text-gray-600">Tentu saja, kami akan bantu wujudkan desain yang Anda inginkan.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section id="promo" class="py-20 bg-white">
-        <div class="container max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-down" data-aos-duration="1000">Promo Spesial</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-green-50 p-6 rounded-xl text-center shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-duration="1000">
-                    <h3 class="font-bold text-xl mb-2">Diskon 30%</h3>
-                    <p class="text-gray-700">Untuk 10 pelanggan pertama di bulan ini!</p>
-                </div>
-                <div class="bg-green-50 p-6 rounded-xl text-center shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
-                    <h3 class="font-bold text-xl mb-2">Gratis Domain</h3>
-                    <p class="text-gray-700">Paket Profesional dan Custom mendapatkan domain gratis!</p>
-                </div>
-                <div class="bg-green-50 p-6 rounded-xl text-center shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <h3 class="font-bold text-xl mb-2">Maintenance Gratis</h3>
-                    <p class="text-gray-700">1 bulan maintenance gratis untuk semua paket!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="layanan-full py-20">
-        <div class="container max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2" data-aos="fade-down" data-aos-duration="1000">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                    Layanan Full 24 JAM!!
-                </h2>
-                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
-                    Kami siap membantu Anda kapan saja! Dengan layanan dukungan 24 jam nonstop, kami memastikan website Anda
-                    selalu berjalan optimal tanpa gangguan. Kapan pun Anda butuh bantuan, tim kami siap sedia memberikan solusi
-                    cepat dan profesional.
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="h-screen flex items-center justify-center bg-gradient-to-br from-cyan-900 via-slate-900 to-gray-900 relative overflow-hidden pt-24">
+            <div class="container mx-auto px-6 text-center z-10 flex flex-col items-center justify-center">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 tracking-wide" data-aos="zoom-in">
+                    Buat <span class="text-cyan-400">Website Profesional</span> untuk Bisnis Anda
+                </h1>
+                <p class="text-base md:text-xl text-slate-200 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Website modern, responsif, dan menarik untuk meningkatkan kredibilitas dan pertumbuhan bisnis Anda. Solusi digital terbaik, harga terjangkau, support ramah!
                 </p>
+                <a href="#paket-website" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white font-bold py-3 px-10 rounded-full text-xl shadow-xl btn-glow transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    Lihat Paket Website
+                </a>
             </div>
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                <img src="img/undraw_workspace_s6wf.svg" alt="Support 24 Jam" class="w-full max-w-md">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
-            <div class="text-center">
-                <div class="flex items-center gap-2 mb-4">
-                    <img src="img/floryweb-high-resolution-logo-transparent.png" class="w-50" alt="">
+        <!-- CARA ORDER -->
+        <section id="cara-order" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wider" data-aos="fade-up">Cara Order</h2>
                 </div>
-                <div class="flex gap-4">
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook w-6 h-6 hover:scale-110 transition"></i></a>
-                    <a href="#"><i class="bi bi-whatsapp w-6 h-6 hover:scale-110 transition"></i></a>
-                    <a href="#"><i class="bi bi-telegram w-6 h-6 hover:scale-110 transition"></i></a>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-chat-dots text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">1. Konsultasi</h3>
+                        <p class="text-slate-300">Hubungi kami dan sampaikan kebutuhan website Anda.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-box-seam text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">2. Pemilihan Paket</h3>
+                        <p class="text-slate-300">Pilih paket website yang sesuai dengan bisnis Anda.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-code-slash text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">3. Proses Pembuatan</h3>
+                        <p class="text-slate-300">Kami mulai membuat website sesuai permintaan.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-patch-check text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">4. Selesai & Revisi</h3>
+                        <p class="text-slate-300">Website diserahkan, Anda bisa memberikan revisi.</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-2">Hubungi kami :</h3>
-                <p>No Hp : 0872172172172</p>
-                <p>Email : floryweb@gmail.com</p>
-                <p>Alamat : Jln. Yang Terbaik no. 89, Yogyakarta</p>
+        </section>
+
+        <!-- PAKET WEBSITE -->
+        <section id="paket-website" class="py-20 bg-gradient-to-b from-slate-900 to-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wider" data-aos="fade-up">Paket Website</h2>
+                    <p class="text-slate-400 mt-2">Pilih paket yang sesuai dengan kebutuhan bisnis Anda. Semua paket sudah termasuk domain dan hosting.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center relative" data-aos="fade-up">
+                        <span class="badge-popular">Best Seller</span>
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-building text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Company Profile</h3>
+                        <p class="text-slate-300 mb-2">Profil bisnis perusahaan, jasa, atau UMKM</p>
+                        <div class="mb-2 text-sm line-through text-slate-500">Rp 1.500.000</div>
+                        <div class="text-cyan-400 text-2xl font-extrabold mb-2">Rp 1 Juta</div>
+                        <div class="text-sm text-red-400 font-semibold mb-4">Diskon 33%</div>
+                        <ul class="text-slate-300 space-y-1 mb-4 text-sm text-left">
+                            <li>Free Domain (.com / .my.id, dll)</li>
+                            <li>SSL / HTTPS</li>
+                            <li>Hosting Gratis</li>
+                            <li>Bandwidth Min. 40GB</li>
+                            <li>Desain Responsive</li>
+                            <li>Desain Logo (Free Simple)</li>
+                            <li>Fitur Chat WhatsApp</li>
+                            <li>Support</li>
+                            <li>Garansi 1 Tahun</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-sm text-center text-slate-400 mb-3">Perpanjangan Mulai <strong>500rb/tahun</strong></p>
+                            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 rounded-xl font-semibold hover:shadow-cyan-500/40 btn-glow transition">Pilih Paket</button>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-shop text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Toko Online/Katalog</h3>
+                        <p class="text-slate-300 mb-2">Katalog produk UMKM, herbal, atau kerajinan</p>
+                        <div class="mb-2 text-sm line-through text-slate-500">Rp 1.500.000</div>
+                        <div class="text-cyan-400 text-2xl font-extrabold mb-2">Rp 1 Juta</div>
+                        <div class="text-sm text-red-400 font-semibold mb-4">Diskon 33%</div>
+                        <ul class="text-slate-300 space-y-1 mb-4 text-sm text-left">
+                            <li>Free Domain (.com / .my.id, dll)</li>
+                            <li>SSL / HTTPS</li>
+                            <li>Hosting Gratis</li>
+                            <li>Bandwidth Min. 40GB</li>
+                            <li>Desain Responsive</li>
+                            <li>Desain Logo (Free Simple)</li>
+                            <li>Fitur Chat WhatsApp</li>
+                            <li>Support</li>
+                            <li>Garansi 1 Tahun</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-sm text-center text-slate-400 mb-3">Perpanjangan Mulai <strong>500rb/tahun</strong></p>
+                            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 rounded-xl font-semibold hover:shadow-cyan-500/40 btn-glow transition">Pilih Paket</button>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-mortarboard text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Instansi/Sekolah</h3>
+                        <p class="text-slate-300 mb-2">Instansi, Sekolah, Dinas, Pemda, Lembaga, dll</p>
+                        <div class="mb-2 text-sm line-through text-slate-500">Rp 3.000.000</div>
+                        <div class="text-cyan-400 text-2xl font-extrabold mb-2">Rp 2 Juta</div>
+                        <div class="text-sm text-red-400 font-semibold mb-4">Diskon 33%</div>
+                        <ul class="text-slate-300 space-y-1 mb-4 text-sm text-left">
+                            <li>Free Domain (.sch.id / .com, dll)</li>
+                            <li>SSL / HTTPS</li>
+                            <li>Hosting Gratis</li>
+                            <li>Bandwidth Unmetered</li>
+                            <li>Desain Semi Custom</li>
+                            <li>Desain Logo (Free Simple)</li>
+                            <li>Fitur Chat WhatsApp</li>
+                            <li>Support</li>
+                            <li>Garansi 1 Tahun</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-sm text-center text-slate-400 mb-3">Perpanjangan Mulai <strong>600rb/tahun</strong></p>
+                            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 rounded-xl font-semibold hover:shadow-cyan-500/40 btn-glow transition">Pilih Paket</button>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-gear text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Custom</h3>
+                        <p class="text-slate-300 mb-2">Bisnis profesional dan sistem informasi</p>
+                        <div class="mb-2 text-sm line-through text-slate-500">Rp 6.000.000</div>
+                        <div class="text-cyan-400 text-2xl font-extrabold mb-2">Rp 4 Juta</div>
+                        <div class="text-sm text-red-400 font-semibold mb-4">Diskon 33%</div>
+                        <ul class="text-slate-300 space-y-1 mb-4 text-sm text-left">
+                            <li>Free Domain (Ya)</li>
+                            <li>SSL / HTTPS</li>
+                            <li>Hosting Unlimited</li>
+                            <li>Bandwidth Unmetered</li>
+                            <li>Email & Domain Akun</li>
+                            <li>Fitur & Desain Full Custom</li>
+                            <li>Support</li>
+                            <li>*Penawaran Sesuai Kebutuhan*</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-sm text-center text-slate-400 mb-3">Perpanjangan Mulai <strong>2jtan/tahun</strong></p>
+                            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 rounded-xl font-semibold hover:shadow-cyan-500/40 btn-glow transition">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-2">Rekomendasi layanan :</h3>
-                <p>Hosting murah</p>
-                <p>Cloud hosting</p>
-                <p>VPS murah</p>
-                <p>SSL</p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wider" data-aos="fade-up">Pertanyaan Umum</h2>
+                </div>
+                <div class="space-y-4 max-w-2xl mx-auto">
+                    <details class="bg-slate-800 p-6 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex items-center gap-4" data-aos="fade-up">
+                        <summary class="font-semibold cursor-pointer text-lg text-white flex items-center gap-3">
+                            <i class="bi bi-clock-history text-cyan-400"></i>
+                            Berapa lama proses pembuatan website?
+                        </summary>
+                        <div class="mt-2 text-slate-300">Rata-rata 3-7 hari kerja tergantung kompleksitas permintaan.</div>
+                    </details>
+                    <details class="bg-slate-800 p-6 rounded-xl shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex items-center gap-4" data-aos="fade-up" data-aos-delay="100">
+                        <summary class="font-semibold cursor-pointer text-lg text-white flex items-center gap-3">
+                            <i class="bi bi-palette2 text-cyan-400"></i>
+                            Apakah bisa request desain sendiri?
+                        </summary>
+                        <div class="mt-2 text-slate-300">Tentu saja, kami akan bantu wujudkan desain yang Anda inginkan.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMO -->
+        <section id="promo" class="py-20 bg-gradient-to-br from-cyan-900/60 via-slate-900/80 to-gray-900/90 backdrop-blur-md">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wider" data-aos="fade-up">Promo Spesial</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl text-center shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="zoom-in">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-percent text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-cyan-400">Diskon 30%</h3>
+                        <p class="text-slate-300">Untuk 10 pelanggan pertama di bulan ini!</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl text-center shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-globe2 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-cyan-400">Gratis Domain</h3>
+                        <p class="text-slate-300">Paket Profesional dan Custom mendapatkan domain gratis!</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl text-center shadow-2xl neon-border hover:shadow-cyan-500/40 transition-all duration-300 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-tools text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-cyan-400">Maintenance Gratis</h3>
+                        <p class="text-slate-300">1 bulan maintenance gratis untuk semua paket!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAYANAN FULL 24 JAM -->
+        <section class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-2/3 mx-auto flex flex-col items-center" data-aos="fade-down">
+                    <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+                        <i class="bi bi-clock text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 text-center" data-aos="fade-down">Layanan Full 24 JAM!!</h2>
+                    <p class="text-slate-300 text-base md:text-lg leading-relaxed text-center">
+                        Kami siap membantu Anda kapan saja! Dengan layanan dukungan 24 jam nonstop, kami memastikan website Anda selalu berjalan optimal tanpa gangguan. Kapan pun Anda butuh bantuan, tim kami siap sedia memberikan solusi cepat dan profesional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEUNGGULAN (WHY CHOOSE US) -->
+        <section class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wider" data-aos="fade-up">Kenapa Memilih FloryWeb?</h2>
+                    <p class="text-slate-400 mt-2">Kami memberikan layanan terbaik untuk kebutuhan digital Anda.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="fade-up">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-cash-coin text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyan-400 mb-2 text-center">Harga Terjangkau</h3>
+                        <p class="text-slate-300 text-center">Paket harga fleksibel dan transparan, cocok untuk semua bisnis.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-lightning-charge text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyan-400 mb-2 text-center">Support Cepat</h3>
+                        <p class="text-slate-300 text-center">Tim kami siap membantu Anda 24 jam dengan respons cepat dan ramah.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-palette text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyan-400 mb-2 text-center">Desain Modern</h3>
+                        <p class="text-slate-300 text-center">Tampilan website selalu mengikuti tren desain terkini dan profesional.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4 shadow-lg">
+                            <i class="bi bi-shield-check text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyan-400 mb-2 text-center">Garansi &<br>Maintenance</h3>
+                        <p class="text-slate-300 text-center">Garansi 1 tahun dan maintenance gratis 1 bulan untuk semua paket.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONI PELANGGAN -->
+        <section class="py-20 bg-gradient-to-br from-cyan-900/60 via-slate-900/80 to-gray-900/90 backdrop-blur-md">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wider" data-aos="fade-up">Apa Kata Klien Kami?</h2>
+                    <p class="text-slate-400 mt-2">Testimoni nyata dari pelanggan yang puas dengan layanan FloryWeb.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="zoom-in">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                            <i class="bi bi-quote text-2xl"></i>
+                        </div>
+                        <p class="text-slate-200 italic mb-4 text-center">"Pelayanan sangat ramah dan hasil website-nya keren banget! Bisnis saya jadi makin dipercaya."</p>
+                        <div class="font-bold text-cyan-400">Rina Sari</div>
+                        <div class="text-slate-400 text-sm">Owner Toko Bunga</div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                            <i class="bi bi-quote text-2xl"></i>
+                        </div>
+                        <p class="text-slate-200 italic mb-4 text-center">"Proses cepat, harga jelas, dan supportnya selalu siap membantu. Sangat recommended!"</p>
+                        <div class="font-bold text-cyan-400">Budi Pratama</div>
+                        <div class="text-slate-400 text-sm">UMKM Kuliner</div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl neon-border flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="bg-cyan-500/10 text-cyan-400 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                            <i class="bi bi-quote text-2xl"></i>
+                        </div>
+                        <p class="text-slate-200 italic mb-4 text-center">"Website sekolah kami tampil modern dan mudah diakses. Terima kasih FloryWeb!"</p>
+                        <div class="font-bold text-cyan-400">Pak Arif</div>
+                        <div class="text-slate-400 text-sm">Kepala Sekolah</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gradient-to-br from-cyan-900/80 via-slate-900/90 to-gray-900/95 backdrop-blur-md pt-16 pb-8 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 mb-10">
+                <!-- Logo & Deskripsi -->
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white flex items-center mb-4">
+                        Flory<span class="text-cyan-400">Web</span>
+                    </a>
+                    <p class="text-slate-400 mb-6 max-w-xs">Membangun masa depan digital Anda dengan website modern, responsif, dan powerful.</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Instagram"><i class="bi bi-instagram text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Facebook"><i class="bi bi-facebook text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300" aria-label="WhatsApp"><i class="bi bi-whatsapp text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300" aria-label="Telegram"><i class="bi bi-telegram text-xl"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-cyan-400">Navigasi</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#hero" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Beranda</a></li>
+                        <li><a href="#cara-order" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Cara Order</a></li>
+                        <li><a href="#paket-website" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Paket Website</a></li>
+                        <li><a href="#faq" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">FAQ</a></li>
+                        <li><a href="#promo" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Promo</a></li>
+                        <li><a href="#kontak" class="text-slate-400 hover:text-cyan-400 transition-colors duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                <!-- Kontak & Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-cyan-400">Kontak</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center gap-3 text-slate-400"><i class="bi bi-telephone-fill text-cyan-400"></i> <span>0812-3456-7890</span></li>
+                        <li class="flex items-center gap-3 text-slate-400"><i class="bi bi-envelope-fill text-cyan-400"></i> <span>info@floryweb.com</span></li>
+                        <li class="flex items-center gap-3 text-slate-400"><i class="bi bi-geo-alt-fill text-cyan-400"></i> <span>Yogyakarta, Indonesia</span></li>
+                    </ul>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-xs text-slate-500 hover:text-cyan-400 transition">Privacy Policy</a>
+                        <span class="text-slate-600">|</span>
+                        <a href="#" class="text-xs text-slate-500 hover:text-cyan-400 transition">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mb-6"></div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-slate-500 text-sm">&copy; 2025 FloryWeb. All right reserved.</div>
+                <div class="text-xs text-slate-500">Dibuat dengan <span class="text-cyan-400">&#10084;</span> oleh Tim FloryWeb</div>
             </div>
         </div>
-        <div class="text-center text-sm text-gray-400 mt-8">&copy; <span id="year"></span> FloryWeb. All rights reserved.</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
-    </script>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-    
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+        AOS.init({
+            duration: 800, // Durasi animasi dalam milidetik
+            once: false, // Animasi selalu muncul saat scroll ke atas
+            offset: 50, // Memicu animasi sedikit lebih awal
         });
 
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('opacity-100');
+            if (isOpen) {
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        });
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            });
+        });
     </script>
 
     <!-- Google tag (gtag.js) -->
